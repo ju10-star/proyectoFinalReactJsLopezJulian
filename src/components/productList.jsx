@@ -1,3 +1,4 @@
+import "./ProductList.css";
 import { useEffect, useState } from "react"
 import {
   getProducts,
@@ -5,8 +6,8 @@ import {
   updateProduct,
   deleteProduct
 } from "../services/api"
-import ProductForm from "./productForm"
-import ProductCard from "./productCard"
+import ProductForm from "./ProductForm"
+import ProductCard from "./ProductCard"
 
 export default function ProductList() {
   const [products, setProducts] = useState([])

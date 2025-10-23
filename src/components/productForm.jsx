@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function productForm({ onSubmit, editingProduct }) {
+export default function ProductForm({ onSubmit, editingProduct }) {
   const [form, setForm] = useState({
     name: "",
     description: "",

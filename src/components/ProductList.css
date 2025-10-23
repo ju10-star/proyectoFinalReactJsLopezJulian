@@ -1,0 +1,121 @@
+/* ======== GRID DE PRODUCTOS ======== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* ======== CARD ======== */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== IMAGEN ======== */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f2f2f2;
+}
+
+/* ======== INFORMACIÓN ======== */
+.product-info {
+  padding: 15px 20px;
+  flex-grow: 1;
+}
+
+.product-info h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.product-info .desc {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-info .price {
+  font-size: 1.1rem;
+  color: #0a7f00;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-info .stock {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ======== BOTONES ======== */
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-top: 1px solid #eaeaea;
+  background-color: #fafafa;
+}
+
+.product-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.product-actions button:hover {
+  opacity: 0.9;
+}
+
+.product-actions .delete {
+  background-color: #b80000;
+  color: white;
+}
+
+.product-actions .delete:hover {
+  background-color: #a00000;
+}
+
+.product-actions button:not(.delete) {
+  background-color: #333;
+  color: white;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .product-info h3 {
+    font-size: 1rem;
+  }
+  .product-image {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .product-card {
+    border-radius: 8px;
+  }
+}
